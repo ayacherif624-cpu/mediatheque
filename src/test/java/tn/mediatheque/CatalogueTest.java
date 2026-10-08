@@ -38,7 +38,7 @@ class CatalogueTest {
         l.emprunter();
 
         assertThrows(
-                IllegalStateException.class,
+                DocumentIndisponibleException.class,
                 l::emprunter
         );
     }

@@ -56,16 +56,14 @@ public class Main {
 
         System.out.println("\n=== DOUBLE EMPRUNT ===");
 
-        // Premier emprunt
         livre.emprunter();
 
         System.out.println("Premier emprunt effectué.");
 
-        // Deuxième emprunt
         try {
             livre.emprunter();
 
-        } catch (IllegalStateException e) {
+        } catch (DocumentIndisponibleException e) {
 
             System.out.println(
                     "Exception détectée : " + e.getMessage()
